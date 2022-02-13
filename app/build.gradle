@@ -5,10 +5,10 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'org.jetbrains.kotlin.android.extensions'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 31
 
     defaultConfig {
-        applicationId "com.test.periodicwork"
+        applicationId "com.test.smartconnect"
         minSdkVersion versions.minSdk
         targetSdkVersion versions.compileSdk
         versionCode versions.code
@@ -86,18 +86,6 @@ dependencies {
     implementation deps.reactivex.rxandroid
     implementation deps.reactivex.rxkotlin
 
-    // Retrofit and OkHttp
-    implementation deps.square.retrofit
-    implementation deps.square.moshi
-    implementation deps.square.rxjava2
-    implementation deps.square.kotlin
-    implementation deps.square.okhttp
-
-    // OkHttp interceptors
-    debugImplementation deps.facebook.stetho
-    debugImplementation deps.facebook.okhttp3
-    debugImplementation deps.others.chuck
-
     // Android Architecture Component
     implementation deps.androidarch.extensions
     implementation deps.androidarch.viewmodel
@@ -112,7 +100,6 @@ dependencies {
 
     // Others
     implementation deps.square.timber
-    implementation deps.others.glide
     implementation deps.others.progress
     implementation(deps.others.permissions) {
         exclude module: "support-v13"
@@ -122,6 +109,6 @@ dependencies {
     testImplementation deps.test.junit
     androidTestImplementation deps.test.runner
     androidTestImplementation deps.test.espresso
-    implementation 'org.glassfish:javax.annotation:10.0-b28'
-    compileOnly 'com.github.pengrad:jdk9-deps:1.0'
+    implementation deps.test.glassfish
+    compileOnly deps.test.pengrad
 }

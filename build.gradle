@@ -35,7 +35,9 @@ buildscript {
 
             'junit'                : '4.12',
             'runner'               : '1.0.2',
-            'espresso'             : '3.0.2'
+            'espresso'             : '3.0.2',
+            'glassfish'            : '10.0-b28',
+            'pengrad'              : '1.0'
     ]
 
     ext.deps = [
@@ -70,16 +72,7 @@ buildscript {
                     'rxkotlin' : "io.reactivex.rxjava2:rxkotlin:${versions.rx_kotlin}"
             ],
             square     : [
-                    'retrofit': "com.squareup.retrofit2:retrofit:${versions.retrofit}",
-                    'moshi'   : "com.squareup.retrofit2:converter-moshi:${versions.retrofit}",
-                    'rxjava2' : "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofit}",
-                    'kotlin'  : "com.squareup.moshi:moshi-kotlin:${versions.moshi_kotlin}",
-                    'okhttp'  : "com.squareup.okhttp3:okhttp:${versions.okhttp}",
                     'timber'  : "com.jakewharton.timber:timber:${versions.timber}"
-            ],
-            facebook   : [
-                    'stetho' : "com.facebook.stetho:stetho:${versions.stetho}",
-                    'okhttp3': "com.facebook.stetho:stetho-okhttp3:${versions.stetho}"
             ],
             androidarch: [
                     'extensions'     : "android.arch.lifecycle:extensions:${versions.android_arch}",
@@ -94,17 +87,17 @@ buildscript {
                     'work_manager'   : "android.arch.work:work-runtime-ktx:${versions.android_arch_work}"
             ],
             others     : [
-                    'chuck'                : "com.readystatesoftware.chuck:library:${versions.chuck}",
                     'constraint'           : "com.android.support.constraint:constraint-layout:${versions.constraint_layout}",
-                    'glide'                : "com.github.bumptech.glide:glide:${versions.glide}",
                     'progress'             : "com.github.vlonjatg:progress-activity:${versions.progress_activity}",
                     'permissions'          : "com.github.hotchemi:permissionsdispatcher:${versions.permission_dispatcher}",
                     'permissions_processor': "com.github.hotchemi:permissionsdispatcher-processor:${versions.permission_dispatcher}"
             ],
             test       : [
-                    'junit'   : "junit:junit:${versions.junit}",
-                    'runner'  : "com.android.support.test:runner:${versions.runner}",
-                    'espresso': "com.android.support.test.espresso:espresso-core:${versions.espresso}"
+                    'junit'     : "junit:junit:${versions.junit}",
+                    'runner'    : "com.android.support.test:runner:${versions.runner}",
+                    'espresso'  : "com.android.support.test.espresso:espresso-core:${versions.espresso}",
+                    'glassfish' : "org.glassfish:javax.annotation:${versions.glassfish}",
+                    'pengrad'   : "com.github.pengrad:jdk9-deps:${versions.pengrad}"
             ]
     ]
     repositories {
